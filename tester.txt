@@ -1,0 +1,19 @@
+Method=>post    http://localhost:3000/auth/register 
+//enter new data
+{
+    "name":"Shubham",
+    "email":"skmW@gmai.com",
+    "password":"123",
+    "confirmPassword":"123"
+
+}
+
+Method=>post    http://localhost:3000/auth/login 
+
+{
+       "email":"skmW@gmai.com",
+         "password":"123",  
+
+}
+
+// http://localhost:3000/auth/googleauth //open in charom
