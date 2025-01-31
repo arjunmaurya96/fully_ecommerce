@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import connectDB from "./config/db.js";
-//import apiKeyAuth from "./models/middleware/authMiddleware.js"; unComment and use
+import apiKeyAuth from "./middleware/authMiddleware.js"
 dotenv.config();
 
 const app = express();
@@ -16,8 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // 🔹 Apply Middleware Globally (all API Calls  Protected)
-//app.use(apiKeyAuth); crrently disable middelware when production then enable globale authhader unComment and use
-
+// app.use(apiKeyAuth); 
 app.use("/auth", authRoutes);
 connectDB();
 
